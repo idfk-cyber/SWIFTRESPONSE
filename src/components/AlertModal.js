@@ -89,7 +89,7 @@ export default function AlertModal({ visible, incident, onAccept, onReject }) {
 
           {/* History Badge */}
           <View style={styles.historyBadge}>
-            <Feather name="calendar" size={16} color="#60a5fa" />
+            <Feather name="calendar" size={16} color="#5C4A3A" />
             <Text style={styles.historyText}>Emergemcy Type: {incident.type}</Text>
           </View>
 
@@ -107,7 +107,7 @@ export default function AlertModal({ visible, incident, onAccept, onReject }) {
 
           {/* Cancel Button which is Hidden unless needed */}
           <TouchableOpacity onPress={onReject} style={{alignItems: 'center', marginTop: 20}}>
-            <Text style={{color: '#71717a'}}>Ignore Alert</Text>
+            <Text style={{color: '#8A7A6D'}}>Ignore Alert</Text>
           </TouchableOpacity>
 
         </View>
@@ -150,18 +150,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   bottomSheet: {
-    backgroundColor: '#18181b',
+    backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 32,
     borderTopRightRadius: 32,
     padding: 24,
     paddingBottom: 40,
     borderTopWidth: 1,
-    borderColor: '#27272a',
+    borderColor: '#E0CFBE',
   },
   dragHandle: {
     width: 48,
     height: 4,
-    backgroundColor: '#3f3f46',
+    backgroundColor: '#E0CFBE',
     borderRadius: 2,
     alignSelf: 'center',
     marginBottom: 24,
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
   victimName: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: 'white',
+    color: '#000000',
   },
   criticalBadge: {
     backgroundColor: '#dc2626',
@@ -189,14 +189,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   coords: {
-    color: '#a1a1aa',
+    color: '#5C4A3A',
     fontSize: 14,
     marginBottom: 20,
   },
   historyBadge: {
-    backgroundColor: 'rgba(30, 58, 138, 0.5)',
+    backgroundColor: '#FBF3EA',
     borderWidth: 1,
-    borderColor: 'rgba(30, 58, 138, 1)',
+    borderColor: '#E0CFBE',
     borderRadius: 12,
     padding: 12,
     flexDirection: 'row',
@@ -205,7 +205,7 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   historyText: {
-    color: '#60a5fa', 
+    color: '#5C4A3A', 
     fontWeight: '600',
   },
   sliderContainer: {
