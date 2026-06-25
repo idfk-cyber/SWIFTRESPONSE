@@ -44,14 +44,14 @@ export default function LoginScreen() {
 
     //helpers
     const onDateChange = (event, selectedDate) => {
-    // Closing the picker immediately, no matter what preventing the kaloop when I type in other fields.
-    setShowDatePicker(false);
+        // Closing the picker immediately, no matter what preventing the kaloop when I type in other fields.
+        setShowDatePicker(false);
 
-    // Only update the date if user actually picked something and didn't cancel
-    if (selectedDate) {
-      setDob(selectedDate);
-    }
-  };
+        // Only update the date if user actually picked something and didn't cancel
+        if (selectedDate) {
+            setDob(selectedDate);
+        }
+    };
 
 
 // Just adjusted a bit from Expo documentation for Base64 image conversion
@@ -162,14 +162,14 @@ export default function LoginScreen() {
                                 <TextInput 
                                     style={[styles.input, styles.halfInput]} 
                                     placeholder="Jane" 
-                                    placeholderTextColor="#71717a"
+                                    placeholderTextColor="#A89685"
                                     value={firstName}
                                     onChangeText={setFirstName}
                                 />
                                 <TextInput 
                                     style={[styles.input, styles.halfInput]} 
                                     placeholder="Doe" 
-                                    placeholderTextColor="#71717a"
+                                    placeholderTextColor="#A89685"
                                     value={surname}
                                     onChangeText={setSurname}
                                 />
@@ -177,7 +177,7 @@ export default function LoginScreen() {
 
                             {/* Date of Birth Trigger */}
                             <TouchableOpacity onPress={() => setShowDatePicker(true)} style={styles.input}>
-                                <Text style={{color: '#fff'}}>{dob.toISOString().split('T')[0]}</Text>
+                                <Text style={{color: '#000000'}}>{dob.toISOString().split('T')[0]}</Text>
                             </TouchableOpacity>
                             
                             {showDatePicker && (
@@ -195,7 +195,7 @@ export default function LoginScreen() {
                     <TextInput 
                         style={styles.input} 
                         placeholder="jane@medic.com" 
-                        placeholderTextColor="#71717a"
+                        placeholderTextColor="#A89685"
                         keyboardType="email-address"
                         autoCapitalize="none"
                         value={email}
@@ -204,7 +204,7 @@ export default function LoginScreen() {
                     <TextInput 
                         style={styles.input} 
                         placeholder="Password" 
-                        placeholderTextColor="#71717a"
+                        placeholderTextColor="#A89685"
                         secureTextEntry
                         value={password}
                         onChangeText={setPassword}
@@ -257,8 +257,8 @@ export default function LoginScreen() {
                             <Picker
                                 selectedValue={ailment}
                                 onValueChange={(itemValue) => setAilment(itemValue)}
-                                style={{color: 'white'}}
-                                dropdownIconColor="white"
+                                style={{color: '#000000'}}
+                                dropdownIconColor="#5C4A3A"
                             >
                                 <Picker.Item label="None" value="None" />
                                 <Picker.Item label="Asthma" value="Asthma" />
@@ -311,7 +311,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#18181b',
+    backgroundColor: '#F5EDE4',
   },
   scrollContent: {
     padding: 24,
@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    color: '#a1a1aa', // text-zinc-400
+    color: '#5C4A3A', // text-zinc-400
   },
   toggleContainer: {
     flexDirection: 'row',
@@ -341,13 +341,13 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     alignItems: 'center',
     borderRadius: 12, // rounded-xl
-    backgroundColor: 'rgba(39, 39, 42, 0.4)', // bg-zinc-800/40
+    backgroundColor: '#EFE3D3',
   },
   toggleBtnActive: {
     backgroundColor: '#ef4444', // bg-red-500 for Responder
   },
   toggleText: {
-    color: '#71717a', // text-zinc-500
+    color: '#5C4A3A',
     fontWeight: '600',
   },
   toggleTextActive: {
@@ -357,11 +357,13 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   input: {
-    backgroundColor: '#27272a', // bg-zinc-800
-    color: 'white',
+    backgroundColor: '#FFFFFF', // bg-zinc-800
+    color: '#000000',
     padding: 16,
     borderRadius: 12,
     fontSize: 16,
+    borderWidth: 1,
+    borderColor: '#E0CFBE',
   },
   row: {
     flexDirection: 'row',
@@ -372,14 +374,14 @@ const styles = StyleSheet.create({
   },
   verificationBox: {
     borderWidth: 2,
-    borderColor: '#3f3f46', // border-zinc-700
+    borderColor: '#E0CFBE',
     borderStyle: 'dashed',
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
   },
   verifLabel: {
-    color: '#a1a1aa', // text-zinc-400
+    color: '#5C4A3A',
     fontSize: 14,
     marginBottom: 12,
   },
@@ -393,10 +395,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   verifBtnDefault: {
-    backgroundColor: '#3f3f46', // bg-zinc-700
+    backgroundColor: '#8A7A6D',
   },
   verifBtnSuccess: {
-    backgroundColor: '#16a34a', // bg-green-600
+    backgroundColor: '#16a34a',
   },
   verifBtnText: {
     color: 'white',
@@ -405,18 +407,20 @@ const styles = StyleSheet.create({
   },
   verifNote: {
     textAlign: 'center',
-    color: '#52525b', // text-zinc-600
+    color: '#8A7A6D',
     fontSize: 12,
     fontStyle: 'italic',
     marginTop: 12,
   },
   pickerWrapper: {
-    backgroundColor: '#27272a',
+    backgroundColor: '#FFFFFF',
     borderRadius: 12,
     overflow: 'hidden',
+    borderWidth: 1,
+    borderColor: '#E0CFBE',
   },
   actionBtn: {
-    backgroundColor: '#ef4444', // bg-red-500
+    backgroundColor: '#ef4444',
     paddingVertical: 16,
     borderRadius: 12,
     alignItems: 'center',
@@ -437,7 +441,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   footerText: {
-    color: '#a1a1aa', // text-zinc-400
+    color: '#5C4A3A',
   },
   linkText: {
     color: '#ef4444',
