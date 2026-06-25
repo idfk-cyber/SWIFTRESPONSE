@@ -109,8 +109,8 @@ export default function ResponderDashboardScreen() {
             <Text style={styles.greeting}>Hello, Medic {userName}</Text>
             
             <View style={styles.statusBadge}>
-              <View style={[styles.statusDot, {backgroundColor: isOnline ? '#22c55e' : '#71717a'}]} />
-              <Text style={[styles.statusText, {color: isOnline ? '#22c55e' : '#71717a'}]}>
+              <View style={[styles.statusDot, {backgroundColor: isOnline ? '#22c55e' : '#8A7A6D'}]} />
+              <Text style={[styles.statusText, {color: isOnline ? '#22c55e' : '#8A7A6D'}]}>
                 {isOnline ? "Online" : "Offline"}
               </Text>
             </View>
@@ -118,7 +118,7 @@ export default function ResponderDashboardScreen() {
           
           <View style={{flexDirection: 'row', alignItems: 'center', gap: 15}}>
              <Switch
-                trackColor={{ false: "#3f3f46", true: "#22c55e" }}
+                trackColor={{ false: "#E0CFBE", true: "#22c55e" }}
                 thumbColor={"#f4f3f4"}
                 onValueChange={() => setIsOnline(!isOnline)}
                 value={isOnline}
@@ -144,8 +144,7 @@ export default function ResponderDashboardScreen() {
               latitudeDelta: 0.01,
               longitudeDelta: 0.01,
             }}
-            userInterfaceStyle="dark"
-            customMapStyle={mapStyle}
+            userInterfaceStyle="light"
           >
             {/* Responder Location */}
             <Marker coordinate={location}>
@@ -198,7 +197,7 @@ export default function ResponderDashboardScreen() {
           </MapView>
         ) : (
           <View style={styles.loadingMap}>
-            <Text style={{color: '#71717a'}}>Loading Map...</Text>
+            <Text style={{color: '#8A7A6D'}}>Loading Map...</Text>
           </View>
         )}
 
@@ -267,15 +266,15 @@ export default function ResponderDashboardScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#18181b',
+    backgroundColor: '#F5EDE4',
     paddingTop: Platform.OS === 'android' ? 40 : 0,
   },
   headerCard: {
-    backgroundColor: '#18181b',
+    backgroundColor: '#F5EDE4',
     padding: 20,
     zIndex: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#27272a',
+    borderBottomColor: '#E0CFBE',
   },
   headerRow: {
     flexDirection: 'row',
@@ -283,7 +282,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   greeting: {
-    color: 'white',
+    color: '#000000',
     fontSize: 18,
     fontWeight: 'bold',
   },
@@ -304,12 +303,12 @@ const styles = StyleSheet.create({
   },
   mapContainer: {
     flex: 1,
-    backgroundColor: '#27272a',
+    backgroundColor: '#E0CFBE',
     margin: 16,
     borderRadius: 24,
     overflow: 'hidden',
     borderWidth: 1,
-    borderColor: '#3f3f46',
+    borderColor: '#E0CFBE',
   },
   map: {
     width: '100%',
@@ -339,7 +338,7 @@ const styles = StyleSheet.create({
     bottom: 24,
     left: 24,
     right: 24,
-    backgroundColor: '#18181b',
+    backgroundColor: '#FFFFFF',
     borderRadius: 16,
     padding: 16,
     borderLeftWidth: 4,
@@ -356,21 +355,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   statusLabel: {
-    color: '#71717a',
+    color: '#5C4A3A',
     fontSize: 10,
     fontWeight: 'bold',
     letterSpacing: 1,
     marginBottom: 2,
   },
   statusValue: {
-    color: 'white',
+    color: '#000000',
     fontSize: 14,
     fontWeight: 'bold',
   },
   radarIcon: {
     width: 40,
     height: 40,
-    backgroundColor: '#27272a',
+    backgroundColor: '#F5EDE4',
     borderRadius: 20,
     alignItems: 'center',
     justifyContent: 'center',
@@ -394,50 +393,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   pendingText: {
-    color: '#a1a1aa',
+    color: '#5C4A3A',
     fontSize: 15,
     textAlign: 'center',
     lineHeight: 24,
   }
 });
-
-// Minimal Dark Map Style
-const mapStyle = [
-  {
-    "elementType": "geometry",
-    "stylers": [{ "color": "#242f3e" }]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [{ "color": "#746855" }]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [{ "color": "#242f3e" }]
-  },
-  {
-    "featureType": "administrative.locality",
-    "elementType": "labels.text.fill",
-    "stylers": [{ "color": "#d59563" }]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [{ "color": "#38414e" }]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry.stroke",
-    "stylers": [{ "color": "#212a37" }]
-  },
-  {
-    "featureType": "road",
-    "elementType": "labels.text.fill",
-    "stylers": [{ "color": "#9ca5b3" }]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [{ "color": "#17263c" }]
-  }
-];
