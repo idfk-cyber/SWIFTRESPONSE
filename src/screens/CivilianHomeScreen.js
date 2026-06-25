@@ -158,8 +158,8 @@ export default function CivilianHomeScreen() {
              <Picker
                 selectedValue={emergencyType}
                 onValueChange={(itemValue) => setEmergencyType(itemValue)}
-                style={{color: 'white', backgroundColor: '#27272a'}}
-                dropdownIconColor="white"
+                style={{color: '#000000', backgroundColor: '#FFFFFF'}}
+                dropdownIconColor="#5C4A3A"
              >
                 <Picker.Item label="General / Unsure" value="General" />
                 <Picker.Item label="Cardiac Arrest" value="Cardiac Arrest" />
@@ -230,8 +230,8 @@ export default function CivilianHomeScreen() {
         {/* BOTTOM NAV */}
         <View style={styles.bottomNav}>
           <TouchableOpacity style={styles.navItem}><Feather name="home" size={28} color="#ef4444" /></TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}><Feather name="book-open" size={28} color="#71717a" /></TouchableOpacity>
-          <TouchableOpacity style={styles.navItem}><Feather name="user" size={28} color="#71717a" /></TouchableOpacity>
+          <TouchableOpacity style={styles.navItem}><Feather name="book-open" size={28} color="#8A7A6D" /></TouchableOpacity>
+          <TouchableOpacity style={styles.navItem}><Feather name="user" size={28} color="#8A7A6D" /></TouchableOpacity>
         </View>
 
       </View>
@@ -240,37 +240,37 @@ export default function CivilianHomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#18181b', paddingTop: Platform.OS === "android" ? 40 : 0 },
+  container: { flex: 1, backgroundColor: '#F5EDE4', paddingTop: Platform.OS === "android" ? 40 : 0 },
   contentContainer: { flex: 1, flexDirection: 'col', justifyContent: 'space-between' },
   topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 24, paddingTop: 20 },
   gpsBadge: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   gpsText: { color: '#22c55e', fontWeight: '600', fontSize: 14 },
-  menuBtn: { padding: 8, backgroundColor: '#27272a', borderRadius: 8 },
+  menuBtn: { padding: 8, backgroundColor: '#EFE3D3', borderRadius: 8 },
   
   selectorContainer: { marginHorizontal: 24, marginTop: 20 },
-  selectorLabel: { color: '#a1a1aa', marginBottom: 8, fontSize: 14, fontWeight: 'bold' },
-  pickerWrapper: { backgroundColor: '#27272a', borderRadius: 12, overflow: 'hidden', borderWidth: 1, borderColor: '#3f3f46' },
+  selectorLabel: { color: '#5C4A3A', marginBottom: 8, fontSize: 14, fontWeight: 'bold' },
+  pickerWrapper: { backgroundColor: '#FFFFFF', borderRadius: 12, overflow: 'hidden', borderWidth: 1, borderColor: '#E0CFBE' },
 
   centerSection: { alignItems: 'center', justifyContent: 'center', marginBottom: 40 },
   pulseContainer: { alignItems: 'center', justifyContent: 'center', width: 300, height: 300 },
   glowRing: { position: 'absolute', width: 260, height: 260, borderRadius: 130, backgroundColor: 'rgba(239, 68, 68, 0.2)' },
   sosButton: { width: 200, height: 200, borderRadius: 100, alignItems: 'center', justifyContent: 'center', elevation: 15, borderWidth: 4, borderColor: '#fca5a5' },
   sosText: { color: 'white', fontSize: 48, fontWeight: 'bold', letterSpacing: 2 },
-  helpText: { color: '#a1a1aa', textAlign: 'center', fontSize: 16, marginTop: 32 },
+  helpText: { color: '#5C4A3A', textAlign: 'center', fontSize: 16, marginTop: 32 },
   
-  bottomNav: { flexDirection: 'row', justifyContent: 'space-around', paddingVertical: 20, borderTopWidth: 1, borderTopColor: '#27272a', backgroundColor: '#18181b' },
+  bottomNav: { flexDirection: 'row', justifyContent: 'space-around', paddingVertical: 20, borderTopWidth: 1, borderTopColor: '#E0CFBE', backgroundColor: '#F5EDE4' },
   navItem: { padding: 12 },
 
   // MODAL STYLES
   modalOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.8)', justifyContent: 'center', padding: 20 },
-  modalContent: { backgroundColor: '#27272a', borderRadius: 24, padding: 24, maxHeight: '70%', borderWidth: 1, borderColor: '#3f3f46' },
+  modalContent: { backgroundColor: '#FFFFFF', borderRadius: 24, padding: 24, maxHeight: '70%', borderWidth: 1, borderColor: '#E0CFBE' },
   modalHeader: { flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 16 },
-  modalTitle: { fontSize: 24, fontWeight: 'bold', color: 'white' },
-  subTitle: { color: '#a1a1aa', marginBottom: 20, fontSize: 14 },
+  modalTitle: { fontSize: 24, fontWeight: 'bold', color: '#000000' },
+  subTitle: { color: '#5C4A3A', marginBottom: 20, fontSize: 14 },
   stepsContainer: { marginBottom: 20 },
   stepRow: { flexDirection: 'row', marginBottom: 16, paddingRight: 10 },
   stepNumber: { color: '#ef4444', fontWeight: 'bold', fontSize: 18, marginRight: 12, width: 24 },
-  stepText: { color: 'white', fontSize: 16, lineHeight: 24, flex: 1 },
+  stepText: { color: '#000000', fontSize: 16, lineHeight: 24, flex: 1 },
   closeBtn: { backgroundColor: '#ef4444', padding: 16, borderRadius: 12, alignItems: 'center' },
   closeBtnText: { color: 'white', fontWeight: 'bold', fontSize: 16 },
   statusBannerPending: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: 'rgba(245, 158, 11, 0.1)', borderWidth: 1, borderColor: '#f59e0b', borderRadius: 8, padding: 10, marginBottom: 16 },
