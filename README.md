@@ -164,7 +164,7 @@ For the app to route correctly, each user document must have a `role` field set 
 ## Author
 
 Mark Mwangi Ndirangu  
-Catholic University of Eastern Africa  
+The Catholic University of Eastern Africa  
 Faculty of Science, 
-Department of Computer Science  
+Department of Computer and Information Science  
 2026
